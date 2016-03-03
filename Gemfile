@@ -1,11 +1,17 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-group :development do
-  gem "shoulda", ">= 0"
-  gem "rdoc", "~> 3.12"
-  gem "bundler"
-  gem "jeweler", "~> 1.8.3"
-  gem "activemodel", "~> 3.0"
-  gem "rack"
-  gem "rake"
+gemspec
+
+group :development, :test do
+  gem 'test-unit'
+  gem 'rack'
+  gem 'rake'
+  gem 'jeweler'
+  gem 'shoulda'
+  gem 'activemodel'
+  gem 'coveralls', :require => false
+  gem 'rack-test'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'simplecov', :require => false
 end
