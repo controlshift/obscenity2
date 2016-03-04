@@ -1,5 +1,7 @@
 # Obscenity [![Build Status](https://secure.travis-ci.org/tjackiw/obscenity.png)](http://travis-ci.org/tjackiw/obscenity)
 
+Due to the unmaintaince from the obsencity gem, i fork and update to make it work with
+
 Obscenity is a profanity filter gem for Ruby/Rubinius, Rails (through ActiveModel), and Rack middleware.
 
 ## Installation
@@ -24,7 +26,7 @@ gem install obscenity
 
 ## Compatibility
 
-Obscenity is compatible with Ruby 1.9.X, Ruby 2.0.X, Rubinius 1.9, Rails 3.X, and Rack as a middleware. Starting with Rails 3, the profanity validation works with any ORM supported by ActiveModel, e.g: ActiveRecord, MongoMapper, Mongoid, etc. 
+Obscenity is compatible with Ruby 1.9.X, Ruby 2.0.X, Rubinius 1.9, Rails 3.X, and Rack as a middleware. Starting with Rails 3, the profanity validation works with any ORM supported by ActiveModel, e.g: ActiveRecord, MongoMapper, Mongoid, etc.
 
 ## Using Obscenity
 
@@ -86,7 +88,7 @@ Obscenity.sanitize("simple text")
 Obscenity.sanitize("text with shit")
 => "text with $@!#%"
 ```
-    
+
 `Obscenity.replacement(style).sanitize(text)` allows you to pass the replacement method to be used when sanitizing the given content. Available replacement values are `:default`, `:garbled`, `:stars`, `:vowels`, and a custom string.
 
 ```ruby
@@ -123,7 +125,7 @@ Obscenity.offensive("text with shit and another biatch")
 
 The ActiveModel component provides easy profanity validation for your models.
 
-First, you need to explicitly require the ActiveModel component: 
+First, you need to explicitly require the ActiveModel component:
 
 ```ruby
 require 'obscenity/active_model'
@@ -134,7 +136,7 @@ Then you can use it in your models as such:
 ```ruby
 # ActiveRecord example
 class Post < ActiveRecord::Base
-  
+
   validates :title, obscenity: true
   validates :body,  obscenity: { sanitize: true, replacement: "[censored]" }
 end
@@ -276,7 +278,7 @@ user.username.should_not be_profane
 ```
 
 ## Contributing to obscenity
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.

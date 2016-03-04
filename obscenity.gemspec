@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'obscenity/version'
 
 Gem::Specification.new do |s|
-  s.name = "obscenity"
+  s.name = "obscenity2"
   s.version = Obscenity::VERSION
 
   s.authors = ["Thiago Jackiw"]
