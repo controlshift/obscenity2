@@ -1,10 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'obscenity/version'
 
 Gem::Specification.new do |s|
   s.name = "obscenity"
-  s.version = "1.0.2"
+  s.version = Obscenity::VERSION
 
   s.authors = ["Thiago Jackiw"]
   s.description = " Obscenity is a profanity filter gem for Ruby/Rubinius, Rails (through ActiveModel), and Rack middleware "

@@ -32,6 +32,7 @@ module Obscenity
     end
 
     private
+
     def validate_config_options
       [@blacklist, @whitelist].each{ |content| validate_list_content(content) if content }
     end
