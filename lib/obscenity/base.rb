@@ -19,15 +19,12 @@ module Obscenity
       end
 
       def profane?(text)
-        return(false) unless text.to_s.size >= 3
-        blacklist.each do |foul|
-          return(true) if text =~ /\b#{foul}\b/i && !whitelist.include?(foul)
+        blacklist.any? do |foul|
+          text =~ /\b#{foul}\b/i && !whitelist.include?(foul)
         end
-        false
       end
 
       def sanitize(text)
-        return(text) unless text.to_s.size >= 3
         blacklist.each do |foul|
           text.gsub!(/\b#{foul}\b/i, replace(foul)) unless whitelist.include?(foul)
         end
@@ -42,7 +39,6 @@ module Obscenity
 
       def offensive(text)
         words = []
-        return(words) unless text.to_s.size >= 3
         blacklist.each do |foul|
           words << foul if text =~ /\b#{foul}\b/i && !whitelist.include?(foul)
         end
@@ -61,6 +57,7 @@ module Obscenity
       end
 
       private
+
       def set_list_content(list)
         case list
         when Array then list
