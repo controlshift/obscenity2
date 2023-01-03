@@ -26,7 +26,7 @@ gem install obscenity2
 
 ## Compatibility
 
-Obscenity is compatible with Ruby 1.9.X, Ruby 2.X, Ruby 3.X, Rubinius 1.9, Rails 3.X, Rails 4.X and Rack as a middleware. Starting with Rails 3 and 4, the profanity validation works with any ORM supported by ActiveModel, e.g: ActiveRecord, MongoMapper, Mongoid, etc.
+Obscenity is compatible with Ruby 2.X, Ruby 3.X, Rubinius 1.9, Rails 3.X, Rails 4.X and Rack as a middleware. Starting with Rails 3 and 4, the profanity validation works with any ORM supported by ActiveModel, e.g: ActiveRecord, MongoMapper, Mongoid, etc.
 
 ## Using Obscenity
 
