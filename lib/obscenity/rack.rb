@@ -37,7 +37,7 @@ module Rack
           content = message
           length  = message.size
         elsif (path = @options[:reject][:path]).present?
-          if (path = ::File.expand_path(path)) && ::File.exists?(path)
+          if (path = ::File.expand_path(path)) && ::File.exist?(path)
             content = ::File.read(path)
             length  = content.size
           end
